@@ -1,6 +1,6 @@
 /*
 * Exercicio número 1 do desafio 1.
-* @author: Rafael Epifanio  
+* @uthor: Rafael Epifanio  
 * Data: 02/12/2019
 var endereco = {
     rua: "Beco do binga",
@@ -15,6 +15,10 @@ console.log("O Rafael mora na rua" + endereco.rua + " " + endereco.numero + ", B
 */
 
 
+/*
+* Exercicio númeroo 3 do desafio 1
+* @uthor: Rafaek Epifanio
+* Data: 02/12/2019
 var inputElement1 = document.getElementById("numeroField1");
 var inputElement2 = document.getElementById("numeroField2");
 var buttonElemnte = document.getElementById("btMostra");
@@ -30,5 +34,5 @@ buttonElemnte.onclick = function(){
         i++;
 
     }
-    console.log("Não entrei no loop");
 }
+*/
