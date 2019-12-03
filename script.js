@@ -18,15 +18,15 @@ console.log("O Rafael mora na rua" + endereco.rua + " " + endereco.numero + ", B
 * @uthor: Rafaek Epifanio
 * Data: 02/12/2019
 */
-var inputElement1 = document.getElementById("numeroField1");
-var inputElement2 = document.getElementById("numeroField2");
-var buttonElementExec1 = document.getElementById("btExercicio2");
+var inputElement1Exec2 = document.getElementById("numeroField1");
+var inputElement2Exec2 = document.getElementById("numeroField2");
+var buttonElementExec2 = document.getElementById("btExercicio2");
 
-buttonElementExec1.onclick = function(){
+buttonElementExec2.onclick = function(){
     
-    var i = inputElement1.value;
+    var i = inputElement1Exec2.value;
 
-    while (i >= inputElement1.value && i <= inputElement2.value){                
+    while (i >= inputElement1Exec2.value && i <= inputElement2Exec2.value){                
          if ((i%2) == 0){
              console.log(i);
          }
@@ -40,10 +40,10 @@ buttonElementExec1.onclick = function(){
 */
 var skills = ["java", "javaScript", "C#", "PHP", "react"];
 
-var buttonElementExec2 = document.getElementById("btExercicio3");
+var buttonElementExec3 = document.getElementById("btExercicio3");
 var js = skills.indexOf("javaScript");
 
-buttonElementExec2.onclick = function (){
+buttonElementExec3.onclick = function (){
     if (js >= 0){
         alert("Encontrado na posição:" + js);
     }   
@@ -53,4 +53,23 @@ buttonElementExec2.onclick = function (){
 * @uthor: Rafael Epifanio
 * Data: 02/12/2019
 */
+var inputElementExec4 = document.getElementById("anosEstudo");
+var buttonElementExec4 = document.getElementById("btExercicio4");
+
+buttonElementExec4.onclick = function(){
+
+    console.log(inputElementExec4.value);
+    var condicao = inputElementExec4.value;
+
+    if (condicao >= 0 && condicao <= 1){
+        alert("Iniciante");
+    } else if (condicao >= 2 && condicao <= 3){
+        alert("Intermediário");
+    } else if (condicao >= 4 && condicao <= 6){
+        alert("Avançado");
+    } else if (condicao > 7){
+        alert("Jedi Master");
+    }
+}
+
 
