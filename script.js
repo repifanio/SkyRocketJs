@@ -11,8 +11,12 @@ var endereco = {
     uf: "RS"
 };
 
-console.log("O Rafael mora na rua" + endereco.rua + " " + endereco.numero + ", Bairro:" 
-            + endereco.bairro + ", Cidade:" + endereco.cidade + "/" + endereco.uf); 
+var buttonElementExec1 = document.getElementById("btExercicio1");
+
+buttonElementExec1.onclick = function(){
+    console.log("O Rafael mora na rua" + endereco.rua + " " + endereco.numero + ", Bairro:" 
+                + endereco.bairro + ", Cidade:" + endereco.cidade + "/" + endereco.uf); 
+}
 /*
 * Exercicio númeroo 2 do desafio 1
 * @uthor: Rafaek Epifanio
@@ -51,14 +55,13 @@ buttonElementExec3.onclick = function (){
 /*
 * Exercico número 4 do desafio 1
 * @uthor: Rafael Epifanio
-* Data: 02/12/2019
+* Data: 03/12/2019
 */
 var inputElementExec4 = document.getElementById("anosEstudo");
 var buttonElementExec4 = document.getElementById("btExercicio4");
 
 buttonElementExec4.onclick = function(){
 
-    console.log(inputElementExec4.value);
     var condicao = inputElementExec4.value;
 
     if (condicao >= 0 && condicao <= 1){
@@ -71,5 +74,26 @@ buttonElementExec4.onclick = function(){
         alert("Jedi Master");
     }
 }
+/*
+* Exercico número 5 do desafio 1
+* @uthor: Rafael Epifanio
+* Data: 03/12/2019
+*/
+var usuarios = [
+    {
+        nome: "Diego",
+        habilidades: ["javaScript", "react", "redux"]
+    },
+    {
+        nome: "Camargo",
+        habilidades: ["C#", "java", "plSql"]
+    }
+];
 
+var buttonElementExec5 = document.getElementById("btExercicio5");
 
+buttonElementExec5.onclick = function() {
+    for (usuario of usuarios){
+        console.log("O " + usuario.nome + " possui as habilidades: " + usuario.habilidades.join());
+    }
+}
