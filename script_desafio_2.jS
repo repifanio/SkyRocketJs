@@ -41,21 +41,49 @@ function getRandonCollor() {
 * @uthor: Rafael Epifanio  
 * Data: 04/12/2019
 */
-var btn = document.querySelector('#btExec2');
+var btn = document.querySelector('#btExec3');
 
 btn.onclick = function () {
+    adicionarPrincipais();
+}
 
-    var nomes = ["Diego", "Gabriel", "Lucas"];
+var nomes = ["Diego", "Gabriel", "Lucas"];
 
+function adicionarPrincipais() { 
+    lista.innerHTML = '';
     for (nome of nomes) {
-
-        var divExec3Element = document.querySelector('#exec3');
-        var lista = document.createElement('ul');
-        var itemLista = document.createElement('li');
-        var textoLista = document.createTextNode(nome);
-        
-        itemLista.appendChild(textoLista);
-        lista.appendChild(itemLista);
-        divExec3Element.appendChild(lista);
+        adicionar(nome);
     }
+    inputExec4.value = '';
+    inputExec4.focus();
+}
+/*
+* Exercicio número 4 do desafio 2.
+* @uthor: Rafael Epifanio  
+* Data: 04/12/2019
+*/
+
+var divExec3Element = document.querySelector('#exec3');
+var lista = document.createElement('ul');
+
+
+function adicionar(texto) {
+    var textoLista = document.createTextNode(texto);
+    var itemLista = document.createElement('li');
+
+    itemLista.appendChild(textoLista);
+    lista.appendChild(itemLista);
+    divExec3Element.appendChild(lista);
+}
+
+var btnExec4 = document.querySelector('#btExec4');
+var inputExec4 = document.querySelector('#textExec4');
+btnExec4.onclick = function(){
+    if (inputExec4.value != ''){
+        nomes.push(inputExec4.value);
+        adicionarPrincipais();
+    } else {
+        adicionarPrincipais();
+    }
+
 }
