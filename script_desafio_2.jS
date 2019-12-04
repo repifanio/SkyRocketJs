@@ -22,11 +22,11 @@ btExec1.onclick = function () {
 * Data: 04/12/2019
 */
 divElement.onclick = function () {
-    var color = getRandonCollor();  
+    var color = getRandonCollor();
     divElement.style.backgroundColor = color;
 }
 
-function getRandonCollor(){
+function getRandonCollor() {
     var letters = "0123456789ABCDEF";
     var color = "#";
     for (var i = 0; i < 6; i++) {
@@ -34,4 +34,28 @@ function getRandonCollor(){
     }
 
     return color;
+}
+
+/*
+* Exercicio número 3 do desafio 2.
+* @uthor: Rafael Epifanio  
+* Data: 04/12/2019
+*/
+var btn = document.querySelector('#btExec2');
+
+btn.onclick = function () {
+
+    var nomes = ["Diego", "Gabriel", "Lucas"];
+
+    for (nome of nomes) {
+
+        var divExec3Element = document.querySelector('#exec3');
+        var lista = document.createElement('ul');
+        var itemLista = document.createElement('li');
+        var textoLista = document.createTextNode(nome);
+        
+        itemLista.appendChild(textoLista);
+        lista.appendChild(itemLista);
+        divExec3Element.appendChild(lista);
+    }
 }
