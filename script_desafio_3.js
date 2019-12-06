@@ -32,27 +32,38 @@ butElementExec1.onclick = function () {
 }
 
 /*
-* Exercicio número 2 do desafio 3.
+* Exercicio número 2/3 do desafio 3.
 * @uthor: Rafael Epifanio  
 * Data: 06/12/2019
 */
 var inputElementExec2 = document.querySelector('#inputIdadeExec2');
 var butElementExec2 = document.querySelector('#butExec2');
 
+var listElement = document.querySelector('#listaRepos');
+
 butElementExec2.onclick = function () {
+    escreveCarregando();
     axios.get('https://api.github.com/users/' + inputElementExec2.value + '/repos')
         .then(function (response) {
-
-            var listElement = document.querySelector('#listaRepos');
-            
-            for (nome of response.data){
+            listElement.innerHTML = '';
+            for (nome of response.data) {
                 var itemElement = document.createElement('li');
                 var text = document.createTextNode(nome.name);
                 itemElement.appendChild(text);
                 listElement.appendChild(itemElement);
+
+                console.log(nome.name);
             }
         })
         .catch(function (reject) {
-            console.log(reject);
+            alert('Não foi possível identificar o usuário solicitado!');
+            listElement.innerHTML = '';
         })
+}
+function escreveCarregando() {
+    var itemElement = document.createElement('li');
+    var text = document.createTextNode('Carregando...');
+    itemElement.appendChild(text);
+    listElement.appendChild(itemElement);
+    console.log('Carregando...');
 }
