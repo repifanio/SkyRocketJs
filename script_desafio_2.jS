@@ -41,13 +41,14 @@ function getRandonCollor() {
 * @uthor: Rafael Epifanio  
 * Data: 04/12/2019
 */
+
+var nomes = ["Diego", "Gabriel", "Lucas"];
 var btn = document.querySelector('#btExec3');
 
 btn.onclick = function () {
     adicionarPrincipais();
 }
 
-var nomes = ["Diego", "Gabriel", "Lucas"];
 
 function adicionarPrincipais() { 
     lista.innerHTML = '';
@@ -65,7 +66,8 @@ function adicionarPrincipais() {
 
 var divExec3Element = document.querySelector('#exec3');
 var lista = document.createElement('ul');
-
+var btnExec4 = document.querySelector('#btExec4');
+var inputExec4 = document.querySelector('#textExec4');
 
 function adicionar(texto) {
     var textoLista = document.createTextNode(texto);
@@ -76,8 +78,6 @@ function adicionar(texto) {
     divExec3Element.appendChild(lista);
 }
 
-var btnExec4 = document.querySelector('#btExec4');
-var inputExec4 = document.querySelector('#textExec4');
 btnExec4.onclick = function(){
     if (inputExec4.value != ''){
         nomes.push(inputExec4.value);
